@@ -24,16 +24,18 @@ Array.prototype.heroesRender = function (folder) {
 
 	let trs = this.map(
 		function(heroes) {
-			return `
+			return (`
 				<tr>
 					<td>${heroes.name}</td>
 					<td>
 						<img src="images/${folder}/${heroes.name.toLowerCase().replaceAll(" ", "")}.svg">
 					</td>
 				</tr>
-			`
+			`);
 		}
 	)
+
+	.join("")
 
 	document.write(` 
 		<table>
